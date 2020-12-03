@@ -63,6 +63,19 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
                     --device cpu 
                     
 ```
+![Image5](images/brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses.jpg)
+ 
+Indeed she is wearing glasses now. Now let's see how does she looks while smiling. The code is given below.
+
+```markdown
+python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard young eyeglasses smiling' \
+                    --encoder saved_models/vae.pth --generator saved_models/generator.pth \
+                    --device cpu 
+                    
+```
+![Image6](images/brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
+Finally the smile :) ...
+ 
 
 
 
