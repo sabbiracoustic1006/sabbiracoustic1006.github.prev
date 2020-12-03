@@ -55,6 +55,8 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
 ```
 ![Image4](images/brown_hair_heavy_makeup_attractive_no_beard_young.jpg)
 
+Now let's see what happens if we add eyeglasses attribute. The code is given below.
+
 ```markdown
 python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard young eyeglasses' \
                     --encoder saved_models/vae.pth --generator saved_models/generator.pth \
@@ -62,7 +64,7 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
                     
 ```
 
-Now let's see what happens if we add eyeglasses attribute. The code is given below.
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
