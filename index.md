@@ -42,19 +42,9 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard' \
 # it is a bit non sense that no_beard has to be given as input for generating image of a female,
 # the attributes processing has to be improved :)
 # A generated image will be saved in generated-imgs folder with the same name as the attributes
-![Image3]('images/brown_hair heavy_makeup attractive no_beard.jpg')                  
-
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
+![Image3](images/brown_hair_heavy_makeup_attractive_no_beard.jpg)   
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
