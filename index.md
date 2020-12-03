@@ -17,7 +17,7 @@ In my fourth year, in Control Systems I Laboratory, I did a group project for ge
 
 Celeb-A dataset has over 200k+ dataset of celebrities with their facial attributes. There were a total of fourty facial attributes. We converted these facial attributes into a 40-dimensional binary vector. We designed an encoder to transform this encoded vector into a latent representation. We also designed a ResNet based Generator Network to transform this latent representation into an image. The generative model was trained using Celeb-A dataset. Our network was trained using a MSE-Loss coupled with Adversarial-Loss. Some sample output of validation set is given below.
 
-![Image](images/sample-1.png) and ![Image1](images/sample-2.png)
+![Image](images/sample-1.png) ![Image1](images/sample-2.png) ![Image2](images/sample-3.png)
 
 
 ```markdown
