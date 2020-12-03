@@ -42,7 +42,7 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard' \
 # it is a bit non sense that no_beard has to be given as input for generating image of a female,
 # the attributes processing has to be improved :)
 # A generated image will be saved in generated-imgs folder with the same name as the attributes
-![Image](images/brown_hair heavy_makeup attractive no_beard.jpg)                  
+![Image3]('images/brown_hair heavy_makeup attractive no_beard.jpg')                  
 
 
 - Bulleted
