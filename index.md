@@ -1,6 +1,6 @@
 ## Welcome to My Page
 
-![MyImg](images/mypic.png)
+   ![MyImg](images/mypic.png)
 
 I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer at [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
 
@@ -17,7 +17,7 @@ In my fourth year, in Control Systems I Laboratory, I did a group project for ge
 
 Celeb-A dataset has over 200k+ dataset of celebrities with their facial attributes. There were a total of fourty facial attributes. We converted these facial attributes into a 40-dimensional binary vector. We designed an encoder to transform this encoded vector into a latent representation. We also designed a ResNet based Generator Network to transform this latent representation into an image. The generative model was trained using Celeb-A dataset. Our network was trained using a MSE-Loss coupled with Adversarial-Loss. Some sample output of validation set is given below.
 
-![Image](images/sample-1.png) and ![Image1](images/sample-2.png)
+![Image](images/sample-1.png) ![Image1](images/sample-2.png) ![Image2](images/sample-3.png)
 
 
 ```markdown
