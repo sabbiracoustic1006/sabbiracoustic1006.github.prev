@@ -74,7 +74,8 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
                     
 ```
 ![Image6](images/brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
-Finally the smile :) ...
+
+Finally the smile :) ... The model shows generalized performance.
  
 
 
