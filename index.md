@@ -17,15 +17,33 @@ In my fourth year, in Control Systems I Laboratory, I did a group project for ge
 
 Celeb-A dataset has over 200k+ dataset of celebrities with their facial attributes. There were a total of fourty facial attributes. We converted these facial attributes into a 40-dimensional binary vector. We designed an encoder to transform this encoded vector into a latent representation. We also designed a ResNet based Generator Network to transform this latent representation into an image. The generative model was trained using Celeb-A dataset. Our network was trained using a MSE-Loss coupled with Adversarial-Loss. Some sample output of validation set is given below.
 
-![Image](images/sample-1.png) ![Image1](images/sample-2.png) ![Image2](images/sample-3.png)
+![Image1](images/sample-2.png) ![Image2](images/sample-3.png)
+
+The top row is the reference images and the bottom row is the generated images with the facial attributes of refernce images given as input. The generated images are not the sharpest and clearest images in quality, but was sufficient to impress our teacher and peers. These are the generated images for the validation set images, and you must be wondering what is the performance with random facial attributes given as input. Lets run the code with a random but carefully chosen input facial attributes. 
 
 
 ```markdown
-Syntax highlighted code block
+# The attributes list is given below
 
-# Header 1
-## Header 2
-### Header 3
+attribute_list = ['5_o_Clock_Shadow', 'Arched_Eyebrows', 'Attractive',' Bags_Under_Eyes', 'Bald', 'Bangs', 
+                  'Big_Lips', 'Big_Nose', 'Black_Hair', 'Blond_Hair', 'Blurry', 'Brown_Hair', 'Bushy_Eyebrows',
+                  'Chubby', 'Double_Chin', 'Eyeglasses', 'Goatee', 'Gray_Hair', 'Heavy_Makeup', 'High_Cheekbones',
+                  'Male', 'Mouth_Slightly_Open', 'Mustache', 'Narrow_Eyes', 'No_Beard', 'Oval_Face', 'Pale_Skin',
+                  'Pointy_Nose', 'Receding_Hairline', 'Rosy_Cheeks', 'Sideburns', 'Smiling', 'Straight_Hair',
+                  'Wavy_Hair', 'Wearing_Earrings', 'Wearing_Hat', 'Wearing_Lipstick', 'Wearing_Necklace', 
+                  'Wearing_Necktie', 'Young']
+
+
+# Step for generating an image for an attractive Female with brown hair and heavy makeup
+python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard' \
+                    --encoder saved_models/vae.pth --generator saved_models/generator.pth \
+                    --device cpu 
+                    
+# it is a bit non sense that no_beard has to be given as input for generating image of a female,
+# the attributes processing has to be improved :)
+# A generated image will be saved in generated-imgs folder with the same name as the attributes
+![Image3]('images/brown_hair heavy_makeup attractive no_beard.jpg')                  
+
 
 - Bulleted
 - List
