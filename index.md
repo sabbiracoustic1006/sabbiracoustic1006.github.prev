@@ -1,5 +1,7 @@
 ## Welcome to My Page
-
+---
+driveId: 1Fl6sJc15SpcRTz6y0rj9nfNNVQfDu0sr/preview
+---
 ![MyImg](images/mypic.png)
 
 I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer at [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
@@ -77,7 +79,9 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
 
 Finally the smile :) ... The model shows generalized performance.
  
+A Video of CNC Plotter is given below.
 
+{% include googleDrivePlayer.html id=1Fl6sJc15SpcRTz6y0rj9nfNNVQfDu0sr/preview %}
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
