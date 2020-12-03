@@ -24,7 +24,6 @@ The top row is the reference images and the bottom row is the generated images w
 
 ```markdown
 # The attributes list is given below
-
 attribute_list = ['5_o_Clock_Shadow', 'Arched_Eyebrows', 'Attractive',' Bags_Under_Eyes', 'Bald', 'Bangs', 
                   'Big_Lips', 'Big_Nose', 'Black_Hair', 'Blond_Hair', 'Blurry', 'Brown_Hair', 'Bushy_Eyebrows',
                   'Chubby', 'Double_Chin', 'Eyeglasses', 'Goatee', 'Gray_Hair', 'Heavy_Makeup', 'High_Cheekbones',
@@ -44,6 +43,27 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard' \
 # A generated image will be saved in generated-imgs folder with the same name as the attributes
 ```
 ![Image3](images/brown_hair_heavy_makeup_attractive_no_beard.jpg)   
+
+Now let's see what happens when we add young attribute. The code is given below.
+
+```markdown
+python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard young' \
+                    --encoder saved_models/vae.pth --generator saved_models/generator.pth \
+                    --device cpu 
+                    
+# A younger female's image is generated hopefully
+```
+![Image4](images/brown_hair_heavy_makeup_attractive_no_beard_young.jpg)
+
+Now let's see what happens if we add eyeglasses attribute. The code is given below.
+
+```markdown
+python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard young eyeglasses' \
+                    --encoder saved_models/vae.pth --generator saved_models/generator.pth \
+                    --device cpu 
+                    
+```
+
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
