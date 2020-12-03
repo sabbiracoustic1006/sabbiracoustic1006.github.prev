@@ -6,7 +6,7 @@ I have done several projects, competitions and researches related to Machine Lea
 
 ### Undergraduate Projects
 
-# Forensic Image Generation and Plotting Using CNC Plotter
+#### Forensic Image Generation and Plotting Using CNC Plotter
 
 ```markdown
 Syntax highlighted code block
