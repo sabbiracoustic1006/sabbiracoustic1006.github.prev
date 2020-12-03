@@ -6,9 +6,17 @@ I have done several projects, competitions and researches related to Machine Lea
 
 ### Undergraduate Projects
 
-My Passion for application based Machine Learning, Signal Processing, Image Processing research and development started from my third year of B.Sc. Education. In my fourth year, in Control Systems I Laboratory, I did a group project for generating images of crime suspects from facial attributes and plotting using CNC plotter. The idea was to do the job of a sketch artist in a forensic department. We used generative model to generate image from facial attributes and after processing the image the image was to be plotted in a 2D paper using CNC plotter. We designed and trained the generative model using [Celeb-A dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and built the CNC Plotter ourself with a limited budget.
+My Passion for application based Machine Learning, Signal Processing, Image Processing research and development started from my third year of B.Sc. Education. I will explain my undergraduate projects one by one briefly. I will also give link to the codes for some projects.
+
 
 #### Forensic Image Generation and Plotting Using CNC Plotter
+
+In my fourth year, in Control Systems I Laboratory, I did a group project for generating images of crime suspects from facial attributes and plotting using CNC plotter. The idea was to do the job of a sketch artist in a forensic department. We used generative model to generate image from facial attributes and after processing the image the image was to be plotted in a 2D paper using CNC plotter. We designed and trained the generative model using [Celeb-A dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and built the CNC Plotter ourself with a limited budget.
+
+Celeb-A dataset has over 200k+ dataset of celebrities with their facial attributes. There were a total of fourty facial attributes. We converted these facial attributes into a 40-dimensional binary vector. We designed an encoder to transform this encoded vector into a latent representation. We also designed a ResNet based Generator Network to transform this latent representation into an image. The generative model was trained using Celeb-A dataset. Our network was trained using a MSE-Loss coupled with Adversarial-Loss. Some sample output of validation set is given below.
+
+![Image](images/sample-1.png)
+
 
 ```markdown
 Syntax highlighted code block
