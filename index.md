@@ -76,6 +76,20 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
 ![Image6](images/brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
 
 Finally the smile :) ... The model shows generalized performance.
+
+Now that we could generate face images from facial attributes, we had to find a way to plot the image in a 2D paper. The generated image is a colored image. However, we could not plot a colored image. For plotting purpose, we could convert the RGB image to Gray Image. The plotting problem would still persist with Gray Image. We would have to plot 256 intensities in a 2D paper, which was not feasible for us. Therefore, we adopted dithering algorithm. This enabled us to retain details of the image while giving us the ease to plot using a binary decision, i.e., whether to plot a point or not. The image for the smiling woman can be dithered using following piece of code.
+
+```
+# dither an existing image
+python preprocess.py --path generated-imgs/brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg
+```
+
+When the above generated image of the smiling young woman with glasses is given as input for dithering the output is as follows.
+
+![dithered image](https://github.com/sabbiracoustic1006/forensic-image-generation/blob/main/dithered-imgs/dithered_brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
+
+The image is converted by dithering algorithm. Now the processed image has only two possible pixel intensities, i.e., zero and one. The image can now be plotted using a CNC plotter.
+
  
 A Video of CNC Plotter is given below. Click on the image to see the video.
 
