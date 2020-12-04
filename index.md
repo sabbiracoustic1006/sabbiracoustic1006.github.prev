@@ -86,7 +86,7 @@ python preprocess.py --path generated-imgs/brown_hair_heavy_makeup_attractive_no
 
 When the above generated image of the smiling young woman with glasses is given as input for dithering the output is as follows.
 
-![dithered image](https://github.com/sabbiracoustic1006/forensic-image-generation/blob/main/dithered-imgs/dithered_brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
+![dithered image](images/dithered_brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
 
 The image is converted by dithering algorithm. Now the processed image has only two possible pixel intensities, i.e., zero and one. The image can now be plotted using a CNC plotter.
 
