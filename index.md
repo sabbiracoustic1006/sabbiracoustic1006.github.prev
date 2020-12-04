@@ -77,9 +77,9 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
 
 Finally the smile :) ... The model shows generalized performance.
  
-A Video of CNC Plotter is given below.
+A Video of CNC Plotter is given below. Click on the image to see the video.
 
-{% include youtubePlayer.html id=dK8GlewlfwY %}
+[![CNC PLOTTER](http://i3.ytimg.com/vi/dK8GlewlfwY/maxresdefault.jpg)](https://www.youtube.com/watch?v=dK8GlewlfwY)
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
