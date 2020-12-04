@@ -92,7 +92,7 @@ The image is converted by dithering algorithm. Now the processed image has only 
 
 Now that the software part was almost complete, we had to find a way to make the plotter and design the whole system ourself in a very limited budget. We gathered the money ourself and 10K BDT was all we could manage for the project from our team members. First of all, we wanted to take facial attributes as input. For that reason, we used a LCD display and a switch systom for taking facial attributes as input. An image for this portion is given below.
 
-![input system](https://photos.google.com/share/AF1QipOb51e4ex4Ze9nd4aX7l9lQaVzFQhKt7osuGBp1zjFEQ2O-XALe7GcamJaqak8LeQ/photo/AF1QipMq-eJ0klhMCEWUVi9A-WeSBNyVNqbQevuNnhB-?key=Y01aOEZaLU5McjNBLTF2V3YxY1ZtdXE5czVnZkVn)
+![input system](images/IMG_20180710_122242.jpg)
  
 A Video of CNC Plotter is given below. Click on the image to see the video.
 
