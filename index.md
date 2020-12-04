@@ -79,8 +79,7 @@ Finally the smile :) ... The model shows generalized performance.
  
 A Video of CNC Plotter is given below.
 
-{% include googleDrivePlayer.html id=1Fl6sJc15SpcRTz6y0rj9nfNNVQfDu0sr/preview %}
-
+{% include youtubePlayer.html id=dK8GlewlfwY %}
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
