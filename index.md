@@ -19,7 +19,7 @@ Celeb-A dataset has over 200k+ dataset of celebrities with their facial attribut
 
 ![Image1](images/sample-2.png) ![Image2](images/sample-3.png)
 
-The top row is the reference images and the bottom row is the generated images with the facial attributes of refernce images given as input. The generated images are not the sharpest and clearest images in quality, but was sufficient to impress our teacher and peers. These are the generated images for the validation set images, and you must be wondering what is the performance with random facial attributes given as input. The code for this project can be found in this [link](https://github.com/sabbiracoustic1006/Generation-of-Face-Images-from-Facial-Attributes). Lets run the code with a random but carefully chosen input facial attributes. 
+The top row is the reference images and the bottom row is the generated images with the facial attributes of refernce images given as input. The generated images are not the sharpest and clearest images in quality, but was sufficient to impress our teacher and peers. These are the generated images for the validation set images, and you must be wondering what is the performance with random facial attributes given as input. The code for this project can be found in this [link](https://github.com/sabbiracoustic1006/forensic-image-generation). Lets run the code with a random but carefully chosen input facial attributes. 
 
 
 ```markdown
