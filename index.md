@@ -117,7 +117,7 @@ via Bluetooth module. The flow chart of the working procedure is shown below.
 * Then arduino processed the received code to generate the required logic for the motor driver to control the car according to user’s intended direction
 
 Below the matlab code for prerecording MFCCs for audio commands is shown.
-```
+```markdown
 clc; clear all;
 Fs = 44100; nBits = 8; nChannels = 1;
 Tw = 20;
@@ -152,8 +152,8 @@ end
 
 The user given command at test time was aligned and the closest match was found using euclidean distance. The code snippet for this alignment and finding closest match is given below.
 
-```
-%% Connection of Bluetooth module
+```markdown
+# Connection of Bluetooth module
 a = Bluetooth('HC-05',1);
 fopen(a);
 'Bluetooth Successfully Connected'
@@ -176,6 +176,6 @@ end
 err = min(error,[],2);
 result = find(err == min(err))
 fprintf(a,result);
-% end
+
 ```
 
