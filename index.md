@@ -96,7 +96,7 @@ Now that the software part was almost complete, we had to find a way to make the
 
 ![input system](images/IMG_20180710_122242.jpg)
  
-A Video of CNC Plotter is given below. Click on the image to see the video.
+Although we worked hard and spent several weeks for designing the CNC plotter, it lacked precision in its ability to draw a given image. The pixels of the image were mapped to coordinates in a 2D paper. We used two nema stepper motors to control the x and y axis. And we used a servo motor to control the up and down movement of a pen to put a dot in the desired coordinate. Below, a video of our CNC plotter drawing a rectangle is attached. Click on the image to see the video.
 
 [![CNC PLOTTER](http://i3.ytimg.com/vi/dK8GlewlfwY/maxresdefault.jpg)](https://www.youtube.com/watch?v=dK8GlewlfwY)
 
