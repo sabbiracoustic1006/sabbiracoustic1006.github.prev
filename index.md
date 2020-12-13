@@ -7,6 +7,8 @@ I have completed my B.Sc. from the Department of EEE, Bangladesh University of E
 I have done several projects, competitions and researches related to Machine Learning, Computer Vision, Biomedical Image Processing, Deep Learning, Audio Processing and Natural Language Processing. The notable projects are given below.
 
 * [Forensice Image Generation and Plotting using CNC Plotter](#Forensic-Image-Generation-and-Plotting-Using-CNC-Plotter)
+* [Wheelchair control using voice command](#Wheelchair-control-using-voice-command)
+* [Camera Model Identification](#Camera-Model-Identification)
 
 ### Undergraduate Projects
 
@@ -186,4 +188,38 @@ A video of our voice controlled vehicle is shared below.
 
 [![voice controlled vehicle](http://i3.ytimg.com/vi/zR8EKmbXl-U/maxresdefault.jpg)](https://www.youtube.com/watch?v=zR8EKmbXl-U)
 
+#### Camera Model Identification
+Camera model identification is a fascination research topic. Information about source camera can be traced via processing the image captured by the camera. To understand the traces left by the camera in the image, the internal processing pipelie of the camera needs to be observed. A flow chart for camera's internal processing pipeline is given below.
+
+When a digital camera captures an image, light reflected from a real-world scene passes through the camera’s lens and optical filter before hitting the imaging sensor. Since most cameras are equipped with only one sensor, they cannot simultaneously record all three primary colors of light at each pixel location. To solve this dilemma, most commercial cameras place a color filter array (CFA) immediately before the sensor. The CFA allows only one color component of light to pass through it at each position before reaching the sensor. As a result, the sensor records only one color value at each pixel location. Next, the two unobserved color values at each pixel location must be interpolated using a process known as demosaicing. There are generally two types of demosaicing algorithms: non-adaptive and adaptive. Non-adaptive demosaicing algorithms apply a uniform strategy to interpolate unobserved colors throughout the whole image. After demosaicing, the image often undergoes a set of post-processing operations such as white balancing, gamma correction, and JPEG compression.
+
+Among all CFA patterns, the Bayer pattern is the most commonly used. Bayer pattern sampling is shown in the figure below.
+
+Most of modern cameras, employ adaptive demosaicing algorithms which can provide higher picture quality. In order to prevent blurring artifacts in textured regions, adaptive algorithms interpolate missing colors in a manner that varies according to the image content. They may also adopt different strategies in different color channels, or interpolate one color channel using the pixel values of other channels. This will introduce complex intra-channel and inter-channel dependencies, making the demosaicing algorithm very nonlinear. 
+
+Therefore, a signature of the camera model can be expected to find if the image is sampled according to bayer pattern and simple non-adaptive demosaicing algorithms are used. Specifically, an error matrix of the original image and the simple demosaiced image is much more likely to contain the trace of camera model information.
+
+The image can be read and sampled according to bayer pattern using the matlab code given below.
+
+```markdown
+# Reading image and sampling according to b.pattern
+I = imread(fullname);
+S = BayerFilter(I,[2 3;1 2]);
+
+# [2 3;1 2] matrix correspond to the pattern [Green Blue;Red Green]
+
+# matlab function for bayer sampling
+function A = BayerFilter(I, d)
+
+[m,n,~]=size(I);
+    
+A=zeros(m,n);
+    
+A(1:2:end,1:2:end)=I(1:2:end,1:2:end,d(1));
+A(2:2:end,1:2:end)=I(2:2:end,1:2:end,d(2));
+A(1:2:end,2:2:end)=I(1:2:end,2:2:end,d(3));
+A(2:2:end,2:2:end)=I(2:2:end,2:2:end,d(4));
+
+end
+```
 
