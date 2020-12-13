@@ -202,8 +202,8 @@ Therefore, a signature of the camera model can be expected to find if the image 
 The image can be read and sampled according to bayer pattern using the matlab code given below.
 
 ```markdown
-# Reading image and sampling according to b.pattern
-I = imread(fullname);
+# Reading image and sampling according to bayer pattern
+I = imread(fullname)
 S = BayerFilter(I,[2 3;1 2]);
 
 # [2 3;1 2] matrix correspond to the pattern [Green Blue;Red Green]
@@ -222,4 +222,13 @@ A(2:2:end,2:2:end)=I(2:2:end,2:2:end,d(4));
 
 end
 ```
+
+The error matrix can be calculated with the following code.
+
+```markdown
+# demosaicing and error calculation
+Id = demosaicing_v2(S,'neighbor');
+E = double(I) - Id;
+```
+
 
