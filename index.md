@@ -4,7 +4,9 @@
 
 I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer at [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
 
-I have done several projects, competitions and researches related to Machine Learning, Computer Vision, Biomedical Image Processing, Deep Learning, Audio Processing and Natural Language Processing. 
+I have done several projects, competitions and researches related to Machine Learning, Computer Vision, Biomedical Image Processing, Deep Learning, Audio Processing and Natural Language Processing. The notable projects are given below.
+
+* [Forensice Image Generation and Plotting using CNC Plotter](#Forensic-Image-Generation-and-Plotting-Using-CNC-Plotter)
 
 ### Undergraduate Projects
 
