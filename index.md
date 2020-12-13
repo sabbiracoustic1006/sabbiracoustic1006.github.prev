@@ -180,6 +180,10 @@ end
 err = min(error,[],2);
 result = find(err == min(err))
 fprintf(a,result);
-
 ```
+
+A video of our voice controlled vehicle is shared below.
+
+[![voice controlled vehicle](http://i3.ytimg.com/vi/zR8EKmbXl-U/maxresdefault.jpg)](https://www.youtube.com/watch?v=zR8EKmbXl-U)
+
 
