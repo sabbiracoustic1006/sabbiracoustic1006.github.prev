@@ -100,3 +100,8 @@ Although we worked hard and spent several weeks for designing the CNC plotter, i
 
 [![CNC PLOTTER](http://i3.ytimg.com/vi/dK8GlewlfwY/maxresdefault.jpg)](https://www.youtube.com/watch?v=dK8GlewlfwY)
 
+#### Wheelchair control using voice command
+
+This is an impactful project for people with paralysis or physical impairment. The motivation for doing this project was to improve the life of such people. With limited resource and budget, we used car as a prototype as a replacement of wheelchair. The car was controlled via a motordriver circuit. We used L298N motordriver circuit. This motordriver circuit has four digital write pins where signals can be sent to control the car via this circuit. The motordriver IC is shown in the image below.
+
+![motor driver](images/motor-driver.jpg)
