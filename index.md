@@ -150,3 +150,32 @@ A(:,:,f) = b;
 end
 ```
 
+The user given command at test time was aligned and the closest match was found using euclidean distance. The code snippet for this alignment and finding closest match is given below.
+
+```
+%% Connection of Bluetooth module
+a = Bluetooth('HC-05',1);
+fopen(a);
+'Bluetooth Successfully Connected'
+
+# record audio for 1 second
+recObj = audiorecorder(Fs,nBits,nChannels);
+disp( 'Start speaking.' );
+recordblocking( recObj,1 );
+disp( 'End of Recording.' );
+play(recObj);
+y = getaudiodata(recObj);
+[ b, FBEs, frames ] = mfcc( y, Fs, Tw, Ts, alpha, hamming, R, M, C, L );
+
+# the mfccs for the test command is aligned and matched with the prerecorded audio commands mfccs
+error = zeros(4,length(b));
+for k = 1:4
+for j = 1:length(b)
+error(k,j) = dtw(A(:,:,k),circshift(b,j-1,2));end
+end
+err = min(error,[],2);
+result = find(err == min(err))
+fprintf(a,result);
+% end
+```
+
