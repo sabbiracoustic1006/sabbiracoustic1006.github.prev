@@ -109,6 +109,8 @@ This is an impactful project for people with paralysis or physical impairment. T
 In this project, we used voice command to control the movement of the car by processing the voice commands in MATLAB and maintaining MATLAB-ARDUINO communication
 via Bluetooth module. The flow chart of the working procedure is shown below.
 
+![flow chart](images/flow-chart.png)
+
 * We have used four voice commands(FORWARD,RIGHT,LEFT,STOP) to control the wheel chair
 * First, the voice commands are saved as .MAT file in MATLAB from a specific user to use as reference
 * Then voice commands from user are taken and processed by matlab to produce corresponding command codes
@@ -116,26 +118,28 @@ via Bluetooth module. The flow chart of the working procedure is shown below.
 * Corresponding Command codes are sent to ARDUINO through the Bluetooth module
 * Then arduino processed the received code to generate the required logic for the motor driver to control the car according to user’s intended direction
 
+![commands](images/commands.png)
+
 Below the matlab code for prerecording MFCCs for audio commands is shown.
 ```markdown
 clc; clear all;
 Fs = 44100; nBits = 8; nChannels = 1;
 Tw = 20;
-% analysis frame duration (ms)
+# analysis frame duration (ms)
 Ts = 10;
-% analysis frame shift (ms)
+# analysis frame shift (ms)
 alpha = 0.97;
-% preemphasis coefficient
+# preemphasis coefficient
 R = [ 300 3700 ]; % frequency range to consider
 M = 20;
-% number of filterbank channels
+# number of filterbank channels
 C = 13;
-% number of cepstral coefficients
+# number of cepstral coefficients
 L = 22;
-% cepstral sine lifter parameter
-% hamming window 
+# cepstral sine lifter parameter
+# hamming window 
 hamming = @(N)(0.54-0.46*cos(2*pi*[0:N-1].'/(N-1)));
-%%
+
 A = [];
 for f = 1 : 4
 n = input( 'For how many sec you want to record?' );
