@@ -105,3 +105,48 @@ Although we worked hard and spent several weeks for designing the CNC plotter, i
 This is an impactful project for people with paralysis or physical impairment. The motivation for doing this project was to improve the life of such people. With limited resource and budget, we used car as a prototype as a replacement of wheelchair. The car was controlled via a motordriver circuit. We used L298N motordriver circuit. This motordriver circuit has four digital write pins where signals can be sent to control the car via this circuit. The motordriver IC is shown in the image below.
 
 ![motor driver](images/motor-driver.jpg)
+
+In this project, we used voice command to control the movement of the car by processing the voice commands in MATLAB and maintaining MATLAB-ARDUINO communication
+via Bluetooth module. The flow chart of the working procedure is shown below.
+
+* We have used four voice commands(FORWARD,RIGHT,LEFT,STOP) to control the wheel chair
+* First, the voice commands are saved as .MAT file in MATLAB from a specific user to use as reference
+* Then voice commands from user are taken and processed by matlab to produce corresponding command codes
+* For serial communication, we used HC-05 Bluetooth Module which is paired with matlab using the Bluetooth of PC
+* Corresponding Command codes are sent to ARDUINO through the Bluetooth module
+* Then arduino processed the received code to generate the required logic for the motor driver to control the car according to user’s intended direction
+
+Below the matlab code for prerecording MFCCs for audio commands is shown.
+```
+clc; clear all;
+Fs = 44100; nBits = 8; nChannels = 1;
+Tw = 20;
+% analysis frame duration (ms)
+Ts = 10;
+% analysis frame shift (ms)
+alpha = 0.97;
+% preemphasis coefficient
+R = [ 300 3700 ]; % frequency range to consider
+M = 20;
+% number of filterbank channels
+C = 13;
+% number of cepstral coefficients
+L = 22;
+% cepstral sine lifter parameter
+% hamming window 
+hamming = @(N)(0.54-0.46*cos(2*pi*[0:N-1].'/(N-1)));
+%%
+A = [];
+for f = 1 : 4
+n = input( 'For how many sec you want to record?' );
+recObj = audiorecorder(Fs,nBits,nChannels);
+disp( 'Start speaking.' );
+recordblocking( recObj,n );
+disp( 'End of Recording.' );
+play(recObj);
+y = getaudiodata(recObj);
+[ b, FBEs, frames ] = mfcc( y, Fs, Tw, Ts, alpha, hamming, R, M, C, L );
+A(:,:,f) = b;
+end
+```
+
