@@ -247,3 +247,10 @@ Image caption generation is a fascinating project. Training a deep learning mode
 ![image6](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000039447.jpg_captioned.jpg)
 ![image7](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000041152.jpg_captioned.jpg)
 ![image8](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000045226.jpg_captioned.jpg)
+
+The model can be trained with the code that is given below.
+```markdown
+# train the model from command line using the command
+python train.py --key caption_model --epochs 40 --batch_size 64 \
+                --device cuda --padding_idx 10000
+```
