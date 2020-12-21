@@ -239,14 +239,11 @@ E = double(I) - Id;
 #### Image caption generation
 Image caption generation is a fascinating project. Training a deep learning model to generate caption of the image is a cumbersome process. I used CNN as encoder and LSTM as decoder to generate a sentence that corresponds to the image. The problem is similar to seq2seq modelling. However, the encoder is not a RNN, rather it is a CNN which creates feature representation from which decoder learns to predict a sentence caption by decoding one word/token at a time. I used pretrained Resnet18 as the encoder CNN that creates a feature representation of the image which is then transformed to initial hidden state and cell state for the decoder. The code for the project can be found at this [link](https://github.com/sabbiracoustic1006/image-caption-generation). Some sample caption predictions of the model is shown below.
 
-![image1](images/COCO_train2014_000000016765.jpg_captioned.jpg)
-![image2](images/COCO_train2014_000000025528.jpg_captioned.jpg)
-![image3](images/COCO_train2014_000000027796.jpg_captioned.jpg)
-![image4](images/COCO_train2014_000000037377.jpg_captioned.jpg)
-![image5](images/COCO_train2014_000000039017.jpg_captioned.jpg)
-![image6](images/COCO_train2014_000000039447.jpg_captioned.jpg)
-![image7](images/COCO_train2014_000000041152.jpg_captioned.jpg)
-![image8](images/COCO_train2014_000000045226.jpg_captioned.jpg)
+![image1](images/COCO_train2014_000000016765.jpg_captioned.jpg) ![image2](images/COCO_train2014_000000025528.jpg_captioned.jpg)
+![image3](images/COCO_train2014_000000027796.jpg_captioned.jpg) ![image4](images/COCO_train2014_000000037377.jpg_captioned.jpg)
+![image5](images/COCO_train2014_000000039017.jpg_captioned.jpg) ![image6](images/COCO_train2014_000000039447.jpg_captioned.jpg)
+![image7](images/COCO_train2014_000000041152.jpg_captioned.jpg) ![image8](images/COCO_train2014_000000045226.jpg_captioned.jpg)
+
 
 The model can be trained with the command that is given below.
 ```markdown
