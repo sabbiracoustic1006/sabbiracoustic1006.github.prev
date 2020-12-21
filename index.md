@@ -248,9 +248,15 @@ Image caption generation is a fascinating project. Training a deep learning mode
 ![image7](images/COCO_train2014_000000041152.jpg_captioned.jpg)
 ![image8](images/COCO_train2014_000000045226.jpg_captioned.jpg)
 
-The model can be trained with the code that is given below.
+The model can be trained with the command that is given below.
 ```markdown
 # train the model from command line using the command
 python train.py --key caption_model --epochs 40 --batch_size 64 \
                 --device cuda --padding_idx 10000
+```
+
+The model can be used to make predictions on the validation dataset using the command given below. Running this code will create a folder named predicted-captions and the images with predicted captions as their title will be saved in the folder.
+```markdown
+# run the command in the commandline
+python inference.py
 ```
