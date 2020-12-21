@@ -9,6 +9,7 @@ I have done several projects, competitions and researches related to Machine Lea
 * [Forensice Image Generation and Plotting using CNC Plotter](#Forensic-Image-Generation-and-Plotting-Using-CNC-Plotter)
 * [Wheelchair control using voice command](#Wheelchair-control-using-voice-command)
 * [Camera Model Identification](#Camera-Model-Identification)
+* [Image caption generation](#Image-caption-generation)
 
 ### Undergraduate Projects
 
@@ -235,4 +236,14 @@ Id = demosaicing_v2(S,'neighbor');
 E = double(I) - Id;
 ```
 
+#### Image caption generation
+Image caption generation is a fascinating project. Training a deep learning model to generate caption of the image is a cumbersome process. I used CNN as encoder and LSTM as decoder to generate a sentence that corresponds to the image. The problem is similar to seq2seq modelling. However, the encoder is not a RNN, rather it is a CNN which creates feature representation from which decoder learns to predict a sentence caption by decoding one word/token at a time. I used pretrained Resnet18 as the encoder CNN that creates a feature representation of the image which is then transformed to initial hidden state and cell state for the decoder. The code for the project can be found at this [link](https://github.com/sabbiracoustic1006/image-caption-generation). Some sample caption predictions of the model is shown below.
 
+![image1](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000016765.jpg_captioned.jpg)
+![image2](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000025528.jpg_captioned.jpg)
+![image3](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000027796.jpg_captioned.jpg)
+![image4](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000037377.jpg_captioned.jpg)
+![image5](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000039017.jpg_captioned.jpg)
+![image6](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000039447.jpg_captioned.jpg)
+![image7](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000041152.jpg_captioned.jpg)
+![image8](https://github.com/sabbiracoustic1006/image-caption-generation/blob/main/samples/COCO_train2014_000000045226.jpg_captioned.jpg)
