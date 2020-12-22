@@ -4,16 +4,16 @@
 
 I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer at [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
 
-I have done several projects, competitions and researches related to Machine Learning, Computer Vision, Biomedical Image Processing, Deep Learning, Audio Processing and Natural Language Processing. The notable projects are given below.
+I have done several projects, competitions and researches related to Machine Learning, Deep Learning, Computer Vision, Intelligent System, Biomedical Image Processing, Audio Processing and Natural Language Processing. The notable projects are mentioned below.
 
-* [Forensice Image Generation and Plotting using CNC Plotter](#Forensic-Image-Generation-and-Plotting-Using-CNC-Plotter)
-* [Wheelchair control using voice command](#Wheelchair-control-using-voice-command)
-* [Camera Model Identification](#Camera-Model-Identification)
-* [Image caption generation](#Image-caption-generation)
+* Forensice Image Generation and Plotting using CNC Plotter
+* Wheelchair control using voice command
+* Camera Model Identification
+* Image caption generation
 
-### Undergraduate Projects
+### Projects
 
-My Passion for application based Machine Learning, Signal Processing, Image Processing research and development started from my third year of B.Sc. Education. I will explain my undergraduate projects one by one briefly. I will also give link to the codes for some projects.
+My Passion for application based Machine Learning, Signal Processing, Image Processing research and development started from my third year of B.Sc. Education. I will explain my projects one by one briefly. I will also give link to the codes for some projects.
 
 
 #### Forensic Image Generation and Plotting Using CNC Plotter
