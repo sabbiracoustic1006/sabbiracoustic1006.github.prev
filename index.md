@@ -9,7 +9,7 @@ I have done several projects, competitions and researches related to Machine Lea
 * Forensice Image Generation and Plotting using CNC Plotter
 * Wheelchair control using voice command
 * Camera Model Identification
-* Image caption generation
+* Image caption generation using CNN and LSTM
 
 ### Projects
 
@@ -236,7 +236,7 @@ Id = demosaicing_v2(S,'neighbor');
 E = double(I) - Id;
 ```
 
-#### Image caption generation
+#### Image caption generation using CNN and LSTM
 Image caption generation is a fascinating project. Training a deep learning model to generate caption of the image is a cumbersome process. I used CNN as encoder and LSTM as decoder to generate a sentence that corresponds to the image. The problem is similar to seq2seq modelling. However, the encoder is not a RNN, rather it is a CNN which creates feature representation from which decoder learns to predict a sentence caption by decoding one word/token at a time. I used pretrained Resnet18 as the encoder CNN that creates a feature representation of the image which is then transformed to initial hidden state and cell state for the decoder. The code for the project can be found at this [link](https://github.com/sabbiracoustic1006/image-caption-generation). Some sample caption predictions of the model is shown below.
 
 ![image1](images/COCO_train2014_000000016765.jpg_captioned.jpg) ![image2](images/COCO_train2014_000000025528.jpg_captioned.jpg)
