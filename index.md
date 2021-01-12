@@ -274,7 +274,7 @@ The real circuit looks a bit messy. A picture is shared below.
 
 A demo video is shared below.
 
-[![home automation](http://i3.ytimg.com/vi/7nJLomlk67U/maxresdefault.jpg)](https://www.youtube.com/watch?v=7nJLomlk67U)
+[![home automation_](http://i3.ytimg.com/vi/7nJLomlk67U/maxresdefault.jpg)](https://www.youtube.com/watch?v=7nJLomlk67U)
 
 
 #### Line Following Bot using Digital Logic Design
