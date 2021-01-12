@@ -10,6 +10,7 @@ I have done several projects, competitions and researches related to Machine Lea
 * Wheelchair control using voice command
 * Camera Model Identification
 * Image caption generation using CNN and LSTM
+* ESP8266 based Home Automation with Google Assistant 
 
 ### Projects
 
@@ -257,3 +258,11 @@ The model can be used to make predictions on the validation dataset using the co
 # run the command in the commandline
 python inference.py
 ```
+#### ESP8266 based Home Automation with Google Assistant 
+
+This was a fun project that I did at my home. Used Optocoupler and Triac with NodeMCU to control home light and fan. IFTTT
+was used to establish network connection between Google Assistant and Blynk app. Then Blynk app was used to send signals through wifi to the NodeMCU which in turn controlled switching of the light and fans.
+
+The schematic diagram of the circuit is shared below.
+![imagesc](images/schematic-diagram.jpg)
+
