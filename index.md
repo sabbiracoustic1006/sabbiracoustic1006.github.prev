@@ -272,6 +272,11 @@ The real circuit looks a bit messy. A picture is shared below.
 
 ![images2](images/actual-ckt.jpg)
 
+A demo video is shared below.
+
+[![home automation](http://i3.ytimg.com/vi/7nJLomlk67U/maxresdefault.jpg)](https://www.youtube.com/watch?v=7nJLomlk67U)
+
+
 #### Line Following Bot using Digital Logic Design
 
 For our Digital Logic Design Lab, we designed and implemented a robot capable of line following using Digital Logic Design (DLD) techniques. This task is straightforward if microcontroller is used. However, it becomes a lot more complicated if the logic is designed using basic logic gates and flip flop. We used IR sensors to get information regarding positional changes during the robots movement and the motion is controlled using a motor driver circuit that is controlled using a DLD circuit.
@@ -280,3 +285,7 @@ The schematic diagram of the circuit is shared below.
 
 ![images_dld](images/dld_1.png)
 ![images_dld1](images/dld_2.png)
+
+A video of our line follower is shared below.
+
+[![line follower](http://i3.ytimg.com/vi/hlxtqzxwOe0/maxresdefault.jpg)](https://www.youtube.com/watch?v=hlxtqzxwOe0)
