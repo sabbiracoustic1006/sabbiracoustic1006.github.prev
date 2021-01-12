@@ -278,4 +278,5 @@ For our Digital Logic Design Lab, we designed and implemented a robot capable of
 
 The schematic diagram of the circuit is shared below.
 
-![images_dld](images/dld.jpg)
+![images_dld](images/dld_1.png)
+![images_dld1](images/dld_2.png)
