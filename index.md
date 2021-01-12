@@ -4,15 +4,17 @@
 
 I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer at [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
 
-I have done several projects, competitions and researches related to Machine Learning, Computer Vision, Biomedical Image Processing, Deep Learning, Audio Processing and Natural Language Processing. The notable projects are given below.
+I have done several projects, competitions and researches related to Machine Learning, Deep Learning, Computer Vision, Intelligent System, Biomedical Image Processing, Audio Processing and Natural Language Processing. The notable projects are mentioned below.
 
-* [Forensice Image Generation and Plotting using CNC Plotter](#Forensic-Image-Generation-and-Plotting-Using-CNC-Plotter)
-* [Wheelchair control using voice command](#Wheelchair-control-using-voice-command)
-* [Camera Model Identification](#Camera-Model-Identification)
+* Forensice Image Generation and Plotting using CNC Plotter
+* Wheelchair control using voice command
+* Camera Model Identification
+* Image caption generation using CNN and LSTM
+* ESP8266 based Home Automation with Google Assistant 
 
-### Undergraduate Projects
+### Projects
 
-My Passion for application based Machine Learning, Signal Processing, Image Processing research and development started from my third year of B.Sc. Education. I will explain my undergraduate projects one by one briefly. I will also give link to the codes for some projects.
+My Passion for application based Machine Learning, Signal Processing, Image Processing research and development started from my third year of B.Sc. Education. I will explain my projects one by one briefly. I will also give link to the codes for some projects.
 
 
 #### Forensic Image Generation and Plotting Using CNC Plotter
@@ -191,9 +193,13 @@ A video of our voice controlled vehicle is shared below.
 #### Camera Model Identification
 Camera model identification is a fascination research topic. Information about source camera can be traced via processing the image captured by the camera. To understand the traces left by the camera in the image, the internal processing pipelie of the camera needs to be observed. A flow chart for camera's internal processing pipeline is given below.
 
+![internal pipeline](images/internal-pipeline.png)
+
 When a digital camera captures an image, light reflected from a real-world scene passes through the camera’s lens and optical filter before hitting the imaging sensor. Since most cameras are equipped with only one sensor, they cannot simultaneously record all three primary colors of light at each pixel location. To solve this dilemma, most commercial cameras place a color filter array (CFA) immediately before the sensor. The CFA allows only one color component of light to pass through it at each position before reaching the sensor. As a result, the sensor records only one color value at each pixel location. Next, the two unobserved color values at each pixel location must be interpolated using a process known as demosaicing. There are generally two types of demosaicing algorithms: non-adaptive and adaptive. Non-adaptive demosaicing algorithms apply a uniform strategy to interpolate unobserved colors throughout the whole image. After demosaicing, the image often undergoes a set of post-processing operations such as white balancing, gamma correction, and JPEG compression.
 
 Among all CFA patterns, the Bayer pattern is the most commonly used. Bayer pattern sampling is shown in the figure below.
+
+![internal pipeline](images/bayer.png)
 
 Most of modern cameras, employ adaptive demosaicing algorithms which can provide higher picture quality. In order to prevent blurring artifacts in textured regions, adaptive algorithms interpolate missing colors in a manner that varies according to the image content. They may also adopt different strategies in different color channels, or interpolate one color channel using the pixel values of other channels. This will introduce complex intra-channel and inter-channel dependencies, making the demosaicing algorithm very nonlinear. 
 
@@ -223,7 +229,7 @@ A(2:2:end,2:2:end)=I(2:2:end,2:2:end,d(4));
 end
 ```
 
-The error matrix can be calculated with the following code.
+The error matrix can be calculated with the following code. The error matrix is found simply by subtracting the nearest neighbor demosaiced image from the original image after bayer sampling.
 
 ```markdown
 # demosaicing and error calculation
@@ -231,4 +237,32 @@ Id = demosaicing_v2(S,'neighbor');
 E = double(I) - Id;
 ```
 
+#### Image caption generation using CNN and LSTM
+Image caption generation is a fascinating project. Training a deep learning model to generate caption of the image is a cumbersome process. I used CNN as encoder and LSTM as decoder to generate a sentence that corresponds to the image. The problem is similar to seq2seq modelling. However, the encoder is not a RNN, rather it is a CNN which creates feature representation from which decoder learns to predict a sentence caption by decoding one word/token at a time. I used pretrained Resnet18 as the encoder CNN that creates a feature representation of the image which is then transformed to initial hidden state and cell state for the decoder. The code for the project can be found at this [link](https://github.com/sabbiracoustic1006/image-caption-generation). Some sample caption predictions of the model is shown below.
+
+![image1](images/COCO_train2014_000000016765.jpg_captioned.jpg) ![image2](images/COCO_train2014_000000025528.jpg_captioned.jpg)
+![image3](images/COCO_train2014_000000027796.jpg_captioned.jpg) ![image4](images/COCO_train2014_000000037377.jpg_captioned.jpg)
+![image5](images/COCO_train2014_000000039017.jpg_captioned.jpg) ![image6](images/COCO_train2014_000000039447.jpg_captioned.jpg)
+![image7](images/COCO_train2014_000000041152.jpg_captioned.jpg) ![image8](images/COCO_train2014_000000045226.jpg_captioned.jpg)
+
+
+The model can be trained with the command that is given below.
+```markdown
+# train the model from command line using the command
+python train.py --key caption_model --epochs 40 --batch_size 64 \
+                --device cuda --padding_idx 10000
+```
+
+The model can be used to make predictions on the validation dataset using the command given below. Running this code will create a folder named predicted-captions and the images with predicted captions as their title will be saved in the folder.
+```markdown
+# run the command in the commandline
+python inference.py
+```
+#### ESP8266 based Home Automation with Google Assistant 
+
+This was a fun project that I did at my home. Used Optocoupler and Triac with NodeMCU to control home light and fan. IFTTT
+was used to establish network connection between Google Assistant and Blynk app. Then Blynk app was used to send signals through wifi to the NodeMCU which in turn controlled switching of the light and fans.
+
+The schematic diagram of the circuit is shared below.
+![imagesc](images/schematic-diagram.jpg)
 
