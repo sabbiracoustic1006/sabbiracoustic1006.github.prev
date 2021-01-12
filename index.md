@@ -11,6 +11,7 @@ I have done several projects, competitions and researches related to Machine Lea
 * Camera Model Identification
 * Image caption generation using CNN and LSTM
 * ESP8266 based Home Automation with Google Assistant 
+* Line Following Bot using Digital Logic Design
 
 ### Projects
 
@@ -270,3 +271,11 @@ The schematic diagram of the circuit is shared below.
 The real circuit looks a bit messy. A picture is shared below.
 
 ![images2](images/actual-ckt.jpg)
+
+#### Line Following Bot using Digital Logic Design
+
+For our Digital Logic Design Lab, we designed and implemented a robot capable of line following using Digital Logic Design (DLD) techniques. This task is straightforward if microcontroller is used. However, it becomes a lot more complicated if the logic is designed using basic logic gates and flip flop. We used IR sensors to get information regarding positional changes during the robots movement and the motion is controlled using a motor driver circuit that is controlled using a DLD circuit.
+
+The schematic diagram of the circuit is shared below.
+
+![images_dld](images/dld.jpg)
