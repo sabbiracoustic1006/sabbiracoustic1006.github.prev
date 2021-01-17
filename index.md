@@ -202,11 +202,11 @@ Among all CFA patterns, the Bayer pattern is the most commonly used. Bayer patte
 
 ![internal pipeline](images/bayer.png)
 
-Most of modern cameras, employ adaptive demosaicing algorithms which can provide higher picture quality. In order to prevent blurring artifacts in textured regions, adaptive algorithms interpolate missing colors in a manner that varies according to the image content. They may also adopt different strategies in different color channels, or interpolate one color channel using the pixel values of other channels. This will introduce complex intra-channel and inter-channel dependencies, making the demosaicing algorithm very nonlinear. 
+Most of the modern cameras, employ adaptive demosaicing algorithms which can provide higher picture quality. In order to prevent blurring artifacts in textured regions, adaptive algorithms interpolate missing colors in a manner that varies according to the image content. They may also adopt different strategies in different color channels, or interpolate one color channel using the pixel values of other channels. This will introduce complex intra-channel and inter-channel dependencies, making the demosaicing algorithm very nonlinear. 
 
-Therefore, a signature of the camera model can be expected to find if the image is sampled according to bayer pattern and simple non-adaptive demosaicing algorithms are used. Specifically, an error matrix of the original image and the simple demosaiced image is much more likely to contain the trace of camera model information.
+Therefore, a signature of the camera model can be expected to find if the image is sampled according to the Bayer pattern and simple non-adaptive demosaicing algorithms are used. Specifically, an error matrix of the original image and the simple demosaiced image is much more likely to contain the trace of camera model information.
 
-The image can be read and sampled according to bayer pattern using the matlab code given below.
+The image can be read and sampled according to the Bayer pattern using the Matlab code given below.
 
 ```markdown
 # Reading image and sampling according to bayer pattern
@@ -230,7 +230,7 @@ A(2:2:end,2:2:end)=I(2:2:end,2:2:end,d(4));
 end
 ```
 
-The error matrix can be calculated with the following code. The error matrix is found simply by subtracting the nearest neighbor demosaiced image from the original image after bayer sampling.
+The error matrix can be calculated with the following code. The error matrix is found simply by subtracting the nearest neighbor demosaiced image from the original image after Bayer sampling.
 
 ```markdown
 # demosaicing and error calculation
@@ -239,7 +239,7 @@ E = double(I) - Id;
 ```
 
 #### Image caption generation using CNN and LSTM
-Image caption generation is a fascinating project. Training a deep learning model to generate caption of the image is a cumbersome process. I used CNN as encoder and LSTM as decoder to generate a sentence that corresponds to the image. The problem is similar to seq2seq modelling. However, the encoder is not a RNN, rather it is a CNN which creates feature representation from which decoder learns to predict a sentence caption by decoding one word/token at a time. I used pretrained Resnet18 as the encoder CNN that creates a feature representation of the image which is then transformed to initial hidden state and cell state for the decoder. The code for the project can be found at this [link](https://github.com/sabbiracoustic1006/image-caption-generation). Some sample caption predictions of the model is shown below.
+Image caption generation is a fascinating project. Training a deep learning model to generate a caption of the image is a cumbersome process. I used CNN as an encoder and LSTM as a decoder to generate a sentence that corresponds to the image. The problem is similar to seq2seq modeling. However, the encoder is not an RNN, rather it is a CNN that creates feature representation from which the decoder learns to predict a sentence caption by decoding one word/token at a time. I used pretrained Resnet18 as the encoder CNN that creates a feature representation of the image which is then transformed to the initial hidden state and cell state for the decoder. The code for the project can be found at this [link](https://github.com/sabbiracoustic1006/image-caption-generation). Some sample caption predictions of the model are shown below.
 
 ![image1](images/COCO_train2014_000000016765.jpg_captioned.jpg) ![image2](images/COCO_train2014_000000025528.jpg_captioned.jpg)
 ![image3](images/COCO_train2014_000000027796.jpg_captioned.jpg) ![image4](images/COCO_train2014_000000037377.jpg_captioned.jpg)
@@ -262,7 +262,7 @@ python inference.py
 #### ESP8266 based Home Automation with Google Assistant 
 
 This was a fun project that I did at my home. Used Optocoupler and Triac with NodeMCU to control home light and fan. IFTTT
-was used to establish network connection between Google Assistant and Blynk app. Then Blynk app was used to send signals through wifi to the NodeMCU which in turn controlled switching of the light and fans.
+was used to establish a network connection between Google Assistant and Blynk app. Then Blynk app was used to send signals through wifi to the NodeMCU which in turn controlled switching of the light and fans.
 
 The schematic diagram of the circuit is shared below.
 
@@ -279,7 +279,7 @@ A demo video is shared below.
 
 #### Line Following Bot using Digital Logic Design
 
-For our Digital Logic Design Lab, we designed and implemented a robot capable of line following using Digital Logic Design (DLD) techniques. This task is straightforward if microcontroller is used. However, it becomes a lot more complicated if the logic is designed using basic logic gates and flip flop. We used IR sensors to get information regarding positional changes during the robots movement and the motion is controlled using a motor driver circuit that is controlled using a DLD circuit.
+For our Digital Logic Design Lab, we designed and implemented a robot capable of line following using Digital Logic Design (DLD) techniques. This task is straightforward if a microcontroller is used. However, it becomes a lot more complicated if the logic is designed using basic logic gates and flip flop. We used IR sensors to get information regarding positional changes during the robot's movement and the motion is controlled using a motor driver circuit that is controlled using a DLD circuit.
 
 The schematic diagram of the circuit is shared below.
 
