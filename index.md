@@ -2,7 +2,7 @@
 
 ![MyImg](images/mypic.png)
 
-I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer at [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
+I have completed my B.Sc. from the Department of EEE, Bangladesh University of Engineering and Technology, in April 2019. Currently, I am working as a Machine Larning Engineer in [REVE Systems](https://www.revesoft.com/), Bangladesh. I am working in REVE Systems for almost a year now. Before joining REVE Systems, I was with the Digital Signal Processing Research Laboratory at the Department of EEE, Bangladesh University of Engineering and Technology.
 
 I have done several projects, competitions and researches related to Machine Learning, Deep Learning, Computer Vision, Intelligent System, Biomedical Image Processing, Audio Processing and Natural Language Processing. The notable projects are mentioned below.
 
@@ -20,13 +20,13 @@ My Passion for application based Machine Learning, Signal Processing, Image Proc
 
 #### Forensic Image Generation and Plotting Using CNC Plotter
 
-In my fourth year, in Control Systems I Laboratory, I did a group project for generating images of crime suspects from facial attributes and plotting using CNC plotter. The idea was to do the job of a sketch artist in a forensic department. We used generative model to generate image from facial attributes and after processing the image the image was to be plotted in a 2D paper using CNC plotter. We designed and trained the generative model using [Celeb-A dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and built the CNC Plotter ourself with a limited budget.
+In my fourth year, in Control Systems I Laboratory, I did a group project for generating images of crime suspects from facial attributes and plotting using a CNC plotter. The idea was to do the job of a sketch artist in a forensic department. We used a generative model to generate images from facial attributes and after processing the image, the image was to be plotted in a 2D paper using a CNC plotter. We designed and trained the generative model using [Celeb-A dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and built the CNC Plotter ourselves with a limited budget.
 
-Celeb-A dataset has over 200k+ dataset of celebrities with their facial attributes. There were a total of fourty facial attributes. We converted these facial attributes into a 40-dimensional binary vector. We designed an encoder to transform this encoded vector into a latent representation. We also designed a ResNet based Generator Network to transform this latent representation into an image. The generative model was trained using Celeb-A dataset. Our network was trained using a MSE-Loss coupled with Adversarial-Loss. Some sample output of validation set is given below.
+Celeb-A dataset has over 200k+ dataset of celebrities with their facial attributes. There were a total of forty facial attributes. We converted these facial attributes into a 40-dimensional binary vector. We designed an encoder to transform this encoded vector into a latent representation. We also designed a ResNet based Generator Network to transform this latent representation into an image. The generative model was trained using the Celeb-A dataset. Our network was trained using an MSE-Loss coupled with Adversarial-Loss. Some sample output of the validation set is given below.
 
 ![Image1](images/sample-2.png) ![Image2](images/sample-3.png)
 
-The top row is the reference images and the bottom row is the generated images with the facial attributes of refernce images given as input. The generated images are not the sharpest and clearest images in quality, but was sufficient to impress our teacher and peers. These are the generated images for the validation set images, and you must be wondering what is the performance with random facial attributes given as input. The code for this project can be found in this [link](https://github.com/sabbiracoustic1006/forensic-image-generation). Lets run the code with a random but carefully chosen input facial attributes. 
+The top row is the reference images and the bottom row is the generated images with the facial attributes of reference images given as input. The generated images are not the sharpest and clearest images in quality but were sufficient to impress our teacher and peers. These are the generated images for the validation set images, and you must be wondering what is the performance with random facial attributes given as input. The code for this project can be found in this [link](https://github.com/sabbiracoustic1006/forensic-image-generation). Let's run the code with random but carefully chosen input facial attributes. 
 
 
 ```markdown
@@ -84,44 +84,44 @@ python inference.py --attributes 'brown_hair heavy_makeup attractive no_beard yo
 
 Finally the smile :) ... The model shows generalized performance.
 
-Now that we could generate face images from facial attributes, we had to find a way to plot the image in a 2D paper. The generated image is a colored image. However, we could not plot a colored image. For plotting purpose, we could convert the RGB image to Gray Image. The plotting problem would still persist with Gray Image. We would have to plot 256 intensities in a 2D paper, which was not feasible for us. Therefore, we adopted dithering algorithm. This enabled us to retain details of the image while giving us the ease to plot using a binary decision, i.e., whether to plot a point or not. The image for the smiling woman can be dithered using following piece of code.
+Now that we could generate face images from facial attributes, we had to find a way to plot the image in a 2D paper. The generated image is a colored image. However, we could not plot a colored image. For plotting purposes, we could convert the RGB image to Gray Image. The plotting problem would still persist with Gray Image. We would have to plot 256 intensities in a 2D paper, which was not feasible for us. Therefore, we adopted a dithering algorithm. This enabled us to retain details of the image while giving us the ease to plot using a binary decision, i.e., whether to plot a point or not. The image for the smiling woman can be dithered using the following piece of code.
 
 ```
 # dither an existing image
 python preprocess.py --path generated-imgs/brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg
 ```
 
-When the above generated image of the smiling young woman with glasses is given as input for dithering the output is as follows.
+When the above-generated image of the smiling young woman with glasses is given as input for dithering the output is as follows.
 
 ![dithered image](images/dithered_brown_hair_heavy_makeup_attractive_no_beard_young_eyeglasses_smiling.jpg)
 
 The image is converted by dithering algorithm. Now the processed image has only two possible pixel intensities, i.e., zero and one. The image can now be plotted using a CNC plotter.
 
-Now that the software part was almost complete, we had to find a way to make the plotter and design the whole system ourself in a very limited budget. We gathered the money ourself and 10K BDT was all we could manage for the project from our team members. First of all, we wanted to take facial attributes as input. For that reason, we used a LCD display and a switch systom for taking facial attributes as input. An image for this portion is given below.
+Now that the software part was almost complete, we had to find a way to make the plotter and design the whole system ourselves on a very limited budget. We gathered the money ourself and 10K BDT was all we could manage for the project from our team members. First of all, we wanted to take facial attributes as input. For that reason, we used an LCD display and a switch system for taking facial attributes as input. An image for this portion is given below.
 
 ![input system](images/IMG_20180710_122242.jpg)
  
-Although we worked hard and spent several weeks for designing the CNC plotter, it lacked precision in its ability to draw a given image. The pixels of the image were mapped to coordinates in a 2D paper. We used two nema stepper motors to control the x and y axis. And we used a servo motor to control the up and down movement of a pen to put a dot in the desired coordinate. Below, a video of our CNC plotter drawing a rectangle is attached. Click on the image to see the video.
+Although we worked hard and spent several weeks designing the CNC plotter, it lacked precision in its ability to draw a given image. The pixels of the image was mapped to coordinates in a 2D paper. We used two NEMA stepper motors to control the x and y-axis. And we used a servo motor to control the up and down movement of a pen to put a dot in the desired coordinate. Below, a video of our CNC plotter drawing a rectangle is attached. Click on the image to see the video.
 
 [![CNC PLOTTER](http://i3.ytimg.com/vi/dK8GlewlfwY/maxresdefault.jpg)](https://www.youtube.com/watch?v=dK8GlewlfwY)
 
 #### Wheelchair control using voice command
 
-This is an impactful project for people with paralysis or physical impairment. The motivation for doing this project was to improve the life of such people. With limited resource and budget, we used car as a prototype as a replacement of wheelchair. The car was controlled via a motordriver circuit. We used L298N motordriver circuit. This motordriver circuit has four digital write pins where signals can be sent to control the car via this circuit. The motordriver IC is shown in the image below.
+This is an impactful project for people with paralysis or physical impairment. The motivation for doing this project was to improve the life of such people. With limited resources and budget, we used a car as a prototype as a replacement for a wheelchair. The car was controlled via a motor driver circuit. We used the L298N motor driver circuit. This motor driver circuit has four digital write pins where signals can be sent to control the car via this circuit. The motor driver IC is shown in the image below.
 
 ![motor driver](images/motor-driver.jpg)
 
-In this project, we used voice command to control the movement of the car by processing the voice commands in MATLAB and maintaining MATLAB-ARDUINO communication
-via Bluetooth module. The flow chart of the working procedure is shown below.
+In this project, we used voice commands to control the movement of the car by processing the voice commands in MATLAB and maintaining MATLAB-ARDUINO communication
+via the Bluetooth module. The flow chart of the working procedure is shown below.
 
 ![flow chart](images/flow-chart.png)
 
-* We have used four voice commands(FORWARD,RIGHT,LEFT,STOP) to control the wheel chair
+* We have used four voice commands(FORWARD, RIGHT, LEFT, STOP) to control the wheelchair
 * First, the voice commands are saved as .MAT file in MATLAB from a specific user to use as reference
-* Then voice commands from user are taken and processed by matlab to produce corresponding command codes
-* For serial communication, we used HC-05 Bluetooth Module which is paired with matlab using the Bluetooth of PC
+* Then voice commands from user are taken and processed by Matlab to produce corresponding command codes
+* For serial communication, we used HC-05 Bluetooth Module which is paired with Matlab using the Bluetooth of PC
 * Corresponding Command codes are sent to ARDUINO through the Bluetooth module
-* Then arduino processed the received code to generate the required logic for the motor driver to control the car according to user’s intended direction
+* Then Arduino processed the received code to generate the required logic for the motor driver to control the car according to the user’s intended direction
 
 ![commands](images/commands.png)
 
@@ -192,7 +192,7 @@ A video of our voice controlled vehicle is shared below.
 [![voice controlled vehicle](http://i3.ytimg.com/vi/zR8EKmbXl-U/maxresdefault.jpg)](https://www.youtube.com/watch?v=zR8EKmbXl-U)
 
 #### Camera Model Identification
-Camera model identification is a fascination research topic. Information about source camera can be traced via processing the image captured by the camera. To understand the traces left by the camera in the image, the internal processing pipelie of the camera needs to be observed. A flow chart for camera's internal processing pipeline is given below.
+Camera model identification is a fascinating research topic. Information about the source camera can be traced via processing the image captured by the camera. To understand the traces left by the camera in the image, the internal processing pipeline of the camera needs to be observed. A flow chart for the camera's internal processing pipeline is given below.
 
 ![internal pipeline](images/internal-pipeline.png)
 
